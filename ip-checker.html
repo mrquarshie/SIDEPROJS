@@ -58,3 +58,22 @@
     <button onclick="getIPAddress()">Get My IP Address</button>
     <div class="ip-display" id="ipDisplay"></div>
   </div>
+
+  <script>
+    function getIPAddress() {
+      const ipDisplay = document.getElementById('ipDisplay');
+
+      // Use an API to fetch the public IP
+      fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+          ipDisplay.textContent = `Your IP Address: ${data.ip}`;
+        })
+        .catch(error => {
+          ipDisplay.textContent = 'Unable to fetch IP address. Please try again!';
+          console.error('Error fetching IP:', error);
+        });
+    }
+  </script>
+</body>
+</html>
