@@ -57,12 +57,15 @@
     <h1>IP Address Checker</h1>
     <button onclick="getIPAddress()">Get My IP Address</button>
     <div class="ip-display" id="ipDisplay"></div>
+    <div>
+        <footer>created by Emmanuel Quarshie</footer>
+      </div>
   </div>
-  <footer>created by Emmanuel Quarshie</footer>
 
+  
   <script>
     function getIPAddress() {
-      const ipDisplay = document.getElementById('ipDisplay');
+      const ipDisplay = document.getElementById('ipDisplay')
 
       // Use an API to fetch the public IP
       fetch('https://api.ipify.org?format=json')
