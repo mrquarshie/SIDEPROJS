@@ -9,7 +9,7 @@ elif int(clientage) >= (18):
     print("Qualified, Let's Continue...")
 clientms = input ("Whats your Marrital status?")
 if clientms== "Single":
-    print("Unfortunately you are not eligble to take loan from loanShark")
+    print("Unfortunately you are not eligble to take loan from loanShark ")
 elif clientms=="Married":
     print("Successful, let's continue...")
 
